@@ -7,32 +7,32 @@ const products = [
     {
         id: 1,
         name: "قیمت آجر",
-        image: {wall},
+        image: wall,
     },
     {
         id: 2,
         name: "چالش های حقوقی",
-        image: {brick1},
+        image: brick1,
     },
     {
         id: 3,
         name: "جدیدترین نما",
-        image: {brick2},
+        image: brick2,
     },
     {
         id: 4,
         name: "تولید کننده",
-        image: {wall},
+        image: wall,
     },
     {
         id: 5,
         name: "تولید کننده",
-        image: {brick1},
+        image: brick1,
     },
     {
         id: 6,
         name: "تولید کننده",
-        image: {brick2},
+        image: brick2,
     },
 ];
 
