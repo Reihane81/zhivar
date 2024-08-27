@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,41 +14,87 @@ const MobileMenu = () => {
     };
 
     return (
-        <div className='flex duration-75'>
-
-
+        <div className="relative">
+            {/* Hamburger Button */}
             <button
+                className="p-4"
                 onClick={toggleMenu}
-                className="flex items-center justify-center w-10 h-10 text-white"
             >
-                {
-                    isOpen ?
-                        <FontAwesomeIcon icon={faXmark} className='p-3 text-2xl rounded-full'
-                                         style={{color: '#fff', backgroundColor: '#ffb703', padding: '.7rem .75rem'}}/>
-                        :
-                        <FontAwesomeIcon icon={faBars} className='p-3 text-2xl rounded-full'
-                                         style={{color: '#fff', backgroundColor: '#ffb703', padding: '.7rem .75rem'}}/>
-                }
+                <FontAwesomeIcon icon={faBars} className='p-3 text-2xl rounded-full'
+                                 style={{color: '#fff', backgroundColor: '#ffb703', padding: '.8rem .8rem'}} />
             </button>
 
-            <div className="relative" style={{transition: 'all 700ms cubic-bezier(.77,0,.175,1)'}}>
-                {isOpen && (
-                    <div className="absolute right-[-20rem] z-10 w-[25rem] py-2 mt-20 rounded-md shadow-lg bg-amber-300" style={{transition: 'all 700ms cubic-bezier(.77,0,.175,1)'}}>
-                        <a href="#" className="block px-4 py-4 text-gray-800 hover:bg-gray-200">
-                            صفحه اصلی
-                        </a>
-                        <a href="#" className="block px-4 py-4 text-gray-800 hover:bg-gray-200">
-                            وبلاگ
-                        </a>
-                        <a href="#" className="block px-4 py-4 text-gray-800 hover:bg-gray-200">
-                            درباره ما
-                        </a>
-                        <a href="#" className="block px-4 py-4 text-gray-800 hover:bg-gray-200">
-                            تماس با ما
-                        </a>
-                    </div>
-                )}
+            {/* Sidebar Menu */}
+            <div
+                className={`fixed top-0 left-0 h-full w-7/12 text-white transform transition-transform duration-500 ease-in-out z-50
+                 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                style={{backgroundColor: "#ffc971"}}
+            >
+                <div className="relative text-right px-8" style={{transition: 'all 700ms cubic-bezier(.77,0,.175,1)'}}>
+                    {isOpen && (
+                        <>
+                            <FontAwesomeIcon icon={faXmark} className='fixed p-3 text-4xl -right-14 top-0 cursor-pointer'
+                                             style={{color: '#fff'}}
+                                            onClick={toggleMenu}/>
+
+                            <ul className="py-2 mt-8" style={{transition: 'all 700ms cubic-bezier(.77,0,.175,1)'}}>
+                                <li>
+                                    <a href="#"
+                                       className="block px-3 py-3 text-white bg-black rounded-full transition duration-500 ease-in-out">
+                                        صفحه اصلی
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       className="block mt-2.5 px-4 py-3 text-black border-b rounded-full hover:bg-black hover:text-white transition duration-500 ease-in-out"
+                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                        وبلاگ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       className="block mt-2.5 px-4 py-3 text-black border-b rounded-full hover:bg-black hover:text-white transition duration-500 ease-in-out"
+                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                        تماس با ما
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       className="block mt-2.5 px-4 py-3 text-black border-b rounded-full hover:bg-black hover:text-white transition duration-500 ease-in-out"
+                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                        درباره با ما
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='#'
+                                       className="block mt-2.5 px-4 py-3 text-black border-b rounded-full hover:bg-black hover:text-white transition duration-500 ease-in-out"
+                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                        العربیۀ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       className="block mt-2.5 px-4 py-3 bg-black text-white rounded-full transition duration-500 ease-in-out"
+                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                        فارسی
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='#'
+                                       className='block mt-2.5 py-3 px-4 text-black rounded-full border-b hover:bg-black hover:text-white transition duration-500 ease-in-out'
+                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                        آجر نسوز
+                                    </a>
+                                </li>
+                            </ul>
+                        </>
+                    )}
+                </div>
             </div>
+
+            {isOpen && (
+                <div className="fixed inset-0 bg-black opacity-55 z-30" onClick={toggleMenu}></div>
+            )}
         </div>
     );
 };

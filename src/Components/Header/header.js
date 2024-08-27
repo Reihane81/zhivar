@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './header.module.css'
 
 // components
 import Menu from "../Menu/menu";
@@ -14,7 +15,7 @@ import logo from '../assets/logo/logo.png';
 
 const Header = () => {
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+    const [isMobile, setIsMobile] = useState(window.innerWidth > 700);
 
     useEffect(() => {
         // Function to handle resize event
@@ -39,19 +40,19 @@ const Header = () => {
                 {
                     isMobile ?
                         <div className='flex'>
-                            <div className='flex pl-5 text-right'>
-                                <FontAwesomeIcon icon={faPhoneVolume} className='border rounded-[50%] text-3xl'
-                                                 style={{color: "#ffb703", borderColor: "#ffb703", padding: ".8rem"}}/>
-                                <div className='pr-3'>
+                            <div className={`${styles.hoverIcon} flex items-center pl-5 text-right cursor-pointer`}>
+                                <FontAwesomeIcon icon={faPhoneVolume} className={`${styles.icon} border rounded-[50%] text-3xl transition duration-500 ease-in-out`}
+                                                 style={{color: "#ffb703", borderColor: "#ffb703", padding: ".9rem"}}/>
+                                <div className='pr-3 hidden lg:block'>
                                     <p className='text-neutral-500'>ارتباط آنلاین</p>
                                     <span>09123757493</span>
                                 </div>
                             </div>
 
-                            <div className='flex text-right'>
-                                <FontAwesomeIcon icon={faHouse} className='border rounded-[50%] text-3xl'
+                            <div className={`${styles.hoverIcon} flex items-center text-right cursor-pointer`}>
+                                <FontAwesomeIcon icon={faHouse} className={`${styles.icon} border rounded-[50%] text-3xl transition duration-500 ease-in-out`}
                                                  style={{color: "#ffb703", borderColor: "#ffb703", padding: ".9rem .8rem"}}/>
-                                <div className='pr-3'>
+                                <div className='pr-3 hidden lg:block'>
                                     <p className='text-neutral-500'>دفتر مرکزی ژیوار</p>
                                     <span>تهران، مجتمع تجاری تجریش</span>
                                 </div>
