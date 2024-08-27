@@ -1,5 +1,9 @@
 import {useState} from "react";
 
+// image
+import iran from '../assets/flag/iran.webp';
+import arabia from '../assets/flag/arabia.webp';
+
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -65,22 +69,22 @@ const MobileMenu = () => {
                                         درباره با ما
                                     </a>
                                 </li>
-                                <li>
-                                    <a href='#'
-                                       className="block mt-2.5 px-4 py-3 text-black border-b rounded-full hover:bg-black hover:text-white transition duration-500 ease-in-out"
-                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                <li className="flex items-center mt-2.5 px-4 py-3 text-black border-b rounded-full hover:bg-black hover:text-white transition duration-500 ease-in-out"
+                                    style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                    <img src={arabia} className='w-5 ml-2'/>
+                                    <a href='#'>
                                         العربیۀ
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#"
-                                       className="block mt-2.5 px-4 py-3 bg-black text-white rounded-full transition duration-500 ease-in-out"
-                                       style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                <li className="flex items-center mt-2.5 px-4 py-3 bg-black text-white rounded-full transition duration-500 ease-in-out"
+                                    style={{borderColor: "rgba(167,167,167,.2)"}}>
+                                    <img src={iran} alt='iran' className='w-5 ml-2'/>
+                                    <a href="#">
                                         فارسی
                                     </a>
                                 </li>
                                 <li>
-                                    <a href='#'
+                                <a href='#'
                                        className='block mt-2.5 py-3 px-4 text-black rounded-full border-b hover:bg-black hover:text-white transition duration-500 ease-in-out'
                                        style={{borderColor: "rgba(167,167,167,.2)"}}>
                                         آجر نسوز

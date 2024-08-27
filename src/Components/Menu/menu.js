@@ -1,3 +1,7 @@
+// image
+import iran from '../assets/flag/iran.webp';
+import arabia from '../assets/flag/arabia.webp';
+
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
@@ -18,11 +22,13 @@ const Menu = () => {
                 <li>
                     <a href='#' className='py-2 px-3 rounded-full hover:bg-amber-400 hover:text-black transition duration-500 ease-in-out'>درباره ما</a>
                 </li>
-                <li>
-                    <a href='#' className='py-2 px-3 rounded-full hover:bg-amber-400 hover:text-black transition duration-500 ease-in-out'>العربیۀ</a>
+                <li className='flex items-center py-2 px-3 rounded-full hover:bg-amber-400 hover:text-black transition duration-500 ease-in-out'>
+                    <img src={arabia} className='w-5 ml-2' />
+                    <a href='#'>العربیۀ</a>
                 </li>
-                <li>
-                    <a href='#' className='py-2 px-3 text-black font-semibold bg-amber-400 rounded-full'>فارسی</a>
+                <li className='flex items-center py-2 px-3 text-black font-semibold bg-amber-400 rounded-full'>
+                    <img src={iran} alt='iran' className='w-5 ml-2'/>
+                    <a href='#'>فارسی</a>
                 </li>
                 <li>
                     <a href='#' className='py-2 px-3 rounded-full hover:bg-amber-400 hover:text-black transition duration-500 ease-in-out'>آجر نسوز</a>

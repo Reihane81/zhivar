@@ -1,5 +1,6 @@
 import Header from './Components/Header/header';
 import Banner from "./Components/Banner/banner";
+import BoxSection from"./Components/BoxSection/boxsection";
 import CommercialSection from "./Components/Commerce/commerce";
 import ProductGallery from "./Components/ProductGallery/productgallery"
 import Articles from "./Components/Articles/articles";
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
+      <BoxSection />
       <CommercialSection />
       <ProductGallery />
       <Articles />
