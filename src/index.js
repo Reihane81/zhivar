@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import "./Components/assets/font/Iranian Sans.ttf"
+import "./Components/assets/font/BYekan+.ttf"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

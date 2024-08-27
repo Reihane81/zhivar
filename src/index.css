@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'IRANSansWeb';
-  src: url('./Components/assets/font/Iranian Sans.ttf') format('truetype')
+  font-family: 'iranyekan';
+  src: url('./Components/assets/font/BYekan+.ttf') format('truetype')
 }
 
 body {
   margin: 0;
-  font-family: 'IRANSansWeb';
+  font-family: 'iranyekan';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   z-index: 99;
